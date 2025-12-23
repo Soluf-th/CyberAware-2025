@@ -18,6 +18,7 @@ import {
 import { Section, InfoCardData } from './types';
 import { HERO_TEXT, GOALS_DATA, ATTACK_TYPES, FUTURE_THREATS } from './constants';
 import SystemMonitor from './components/SystemMonitor';
+import cyberchat  from './components/cyberchat';
 import ImageLab from './components/ImageLab';
 import VideoLab from './components/VideoLab';
 import LiveConversation from './components/LiveConversation';
