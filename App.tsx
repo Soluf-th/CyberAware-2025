@@ -12,7 +12,8 @@ import {
   ImageIcon,
   Film,
   Mic,
-  Key
+  Key,
+  PackageSearch
 } from 'lucide-react';
 import { Section, InfoCardData } from './types';
 import { HERO_TEXT, GOALS_DATA, ATTACK_TYPES, FUTURE_THREATS } from './constants';
@@ -22,6 +23,7 @@ import ImageLab from './components/ImageLab';
 import VideoLab from './components/VideoLab';
 import LiveConversation from './components/LiveConversation';
 import SecureAuthLab from './components/SecureAuthLab';
+import SupplyChainLab from './components/SupplyChainLab';
 
 const InfoCard: React.FC<{ data: InfoCardData }> = ({ data }) => (
   <div className="bg-slate-800/50 border border-slate-700 p-6 rounded-xl hover:bg-slate-800 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-900/20 group">
@@ -78,6 +80,7 @@ const App: React.FC = () => {
           <div className="hidden xl:flex items-center space-x-1 overflow-x-auto">
             <NavLink section={Section.HOME} label="HOME" />
             <NavLink section={Section.CHAT} label="AI CHAT" icon={Terminal} />
+            <NavLink section={Section.SUPPLY_CHAIN} label="DEPENDABOT" icon={PackageSearch} />
             <NavLink section={Section.SECURE_AUTH} label="SECURE AUTH" icon={Key} />
             <NavLink section={Section.IMAGE_LAB} label="IMAGE LAB" icon={ImageIcon} />
             <NavLink section={Section.VIDEO_LAB} label="VIDEO LAB" icon={Film} />
@@ -94,6 +97,7 @@ const App: React.FC = () => {
           <div className="xl:hidden bg-slate-900 border-b border-slate-800 p-4 space-y-2 flex flex-col">
             <NavLink section={Section.HOME} label="HOME" />
             <NavLink section={Section.CHAT} label="AI CHAT" icon={Terminal} />
+            <NavLink section={Section.SUPPLY_CHAIN} label="DEPENDABOT" icon={PackageSearch} />
             <NavLink section={Section.SECURE_AUTH} label="SECURE AUTH" icon={Key} />
             <NavLink section={Section.IMAGE_LAB} label="IMAGE LAB" icon={ImageIcon} />
             <NavLink section={Section.VIDEO_LAB} label="VIDEO LAB" icon={Film} />
@@ -142,6 +146,7 @@ const App: React.FC = () => {
         )}
 
         {activeSection === Section.CHAT && <CyberChat />}
+        {activeSection === Section.SUPPLY_CHAIN && <SupplyChainLab />}
         {activeSection === Section.SECURE_AUTH && <SecureAuthLab />}
         {activeSection === Section.IMAGE_LAB && <ImageLab />}
         {activeSection === Section.VIDEO_LAB && <VideoLab />}
