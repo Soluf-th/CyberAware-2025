@@ -17,7 +17,6 @@ import {
 } from 'lucide-react';
 import { Section, InfoCardData } from './types';
 import { HERO_TEXT, GOALS_DATA, ATTACK_TYPES, FUTURE_THREATS } from './constants';
-import CyberChat from './components/CyberChat';
 import SystemMonitor from './components/SystemMonitor';
 import ImageLab from './components/ImageLab';
 import VideoLab from './components/VideoLab';
