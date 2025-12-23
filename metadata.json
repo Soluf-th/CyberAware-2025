@@ -1,0 +1,9 @@
+
+{
+  "name": "CyberAware 2025",
+  "description": "An educational platform regarding Cyber Attacks, their types, and prevention methods for the year 2025, featuring an AI Cyber Security Assistant.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
